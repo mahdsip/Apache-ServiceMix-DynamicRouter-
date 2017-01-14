@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly>
+    <id>bin</id>
+    <formats>
+        <format>jar</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <fileSet>
+            <directory>src/main/resources</directory>
+            <outputDirectory>/</outputDirectory>
+        </fileSet>
+    </fileSets>
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>/</outputDirectory>
+            <unpack>false</unpack>
+            <scope>runtime</scope>
+            <includes>
+                <include>es.altana.selene-hup-gsm.md:md-dominio1-su</include>
+                <include>es.altana.selene-hup-gsm.md:md-dominio2-su</include>
+                <include>es.altana.selene-hup-gsm.md:md-dominio3-su</include>
+                <include>es.altana.selene-hup-gsm.md:md-dominio4-su</include>
+                <include>es.altana.selene-hup-gsm.md:md-dominio5-su</include>
+                <include>es.altana.selene-hup-gsm.md:md-dominio6-su</include>
+            </includes>
+        </dependencySet>
+    </dependencySets>
+</assembly>

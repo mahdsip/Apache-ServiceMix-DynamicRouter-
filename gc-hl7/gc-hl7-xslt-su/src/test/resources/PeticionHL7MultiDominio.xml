@@ -1,0 +1,28 @@
+<TOTALRESPONSE>
+   <REQUEST>
+      <RESULT>
+         <RESPONSE>
+            <ERROR>No se ha obtenido respuesta del destino</ERROR>
+
+            <ENDPOINT>NoValido:</ENDPOINT>
+         </RESPONSE>
+      </RESULT>
+   </REQUEST>
+
+   <REQUEST>
+      <RESULT>
+         <RESPONSE>
+            <ERROR>No se ha obtenido respuesta del destino</ERROR>
+
+            <ENDPOINT>NoValido:</ENDPOINT>
+         </RESPONSE>
+      </RESULT>
+   </REQUEST>
+
+   <REQUEST>
+      <RESULT>
+         <ERROR>No se ha obtenido respuesta de ningún destino</ERROR>
+      </RESULT>
+   </REQUEST>
+</TOTALRESPONSE>
+

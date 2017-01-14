@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="urn:http://salud.siemens.es" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:shd="http://selenetelecita.selene.salud.siemens.es/v1/solicitudHuecosDisponibles" xmlns:rhd="http://selenetelecita.selene.salud.siemens.es/v1/respuestaHuecosDisponibles" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:http://salud.siemens.es">
+	<types>
+		<s:schema elementFormDefault="qualified" targetNamespace="urn:http://salud.siemens.es" xmlns:tns="urn:http://salud.siemens.es">
+			<s:import namespace="http://selenetelecita.selene.salud.siemens.es/v1/solicitudHuecosDisponibles" schemaLocation="SolicitudHuecosDisponibles_Msg.xsd" id="shd"/>
+			<s:import namespace="http://selenetelecita.selene.salud.siemens.es/v1/respuestaHuecosDisponibles" schemaLocation="RespuestaHuecosDisponibles_Msg.xsd" id="rhd"/>
+			<s:element name="Operacion">
+				<s:complexType>
+					<s:sequence>
+						<s:element ref="shd:SolicitudHuecosDisponibles" minOccurs="1" maxOccurs="1"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="OperacionResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element ref="rhd:RespuestaHuecosDisponibles" minOccurs="1" maxOccurs="1"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+		</s:schema>
+	</types>
+	<message name="OperacionSoapIn">
+		<part name="parameters" element="s0:Operacion"/>
+	</message>
+	<message name="OperacionSoapOut">
+		<part name="parameters" element="s0:OperacionResponse"/>
+	</message>
+	<portType name="Service1Soap">
+		<operation name="Operacion">
+			<input message="s0:OperacionSoapIn"/>
+			<output message="s0:OperacionSoapOut"/>
+		</operation>
+	</portType>
+	<binding name="Service1Soap" type="s0:Service1Soap">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="Operacion">
+			<soap:operation soapAction="urn:http://salud.siemens.es/Operacion" style="document"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="Service1">
+		<port name="Service1Soap" binding="s0:Service1Soap">
+			<soap:address location="REPLACE_WITH_ACTUAL_URL"/>
+		</port>
+	</service>
+</definitions>

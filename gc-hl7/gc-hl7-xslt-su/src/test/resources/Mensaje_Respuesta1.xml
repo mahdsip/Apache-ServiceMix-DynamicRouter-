@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OperacionResponse xmlns="http://selenetelecita.selene.salud.siemens.es/v1/Operations">
+ <OperacionResult>
+  <RespuestaHuecosDisponibles xmlns="http://selenetelecita.selene.salud.siemens.es/v1/respuestaHuecosDisponibles">
+   <ns1:Contexto xmlns:ns1="http://selenetelecita.selene.salud.siemens.es/v1/contexto">
+    <Aplicacion nombre="TELECITA" version="1.0" xmlns="" />
+    <MensajeID xmlns="">0</MensajeID>
+    <MensajeRaizID xmlns="">0</MensajeRaizID>
+    <Origen xmlns="">
+      <Centro codigo="16090410" nombre="C. S. NARANJO" sistemaCodificacion="TELECITA" />
+    </Origen>
+   </ns1:Contexto>
+   <CodigoResultado codigo="0" descripcion="Resultado satisfactorio" sistemaCodificacion="TELECITA" xmlns="" />
+   <Huecos fechaYHoraOrigen="2006-05-19T13:00:00.000+02:00" xmlns="">
+    <Hueco>
+      <FechaYHora fecha="2006-05-19" hora="13:00:00.000+02:00" />
+      <ns2:Agenda codigo="ARR_TRA2" sistemaCodificacion="TELECITA" xmlns:ns2="http://selenetelecita.selene.salud.siemens.es/v1/agenda">
+        <Especialista cias="1609840014W" />
+        <Servicio codigo="CH0086TRA" sistemaCodificacion="TELECITA" />
+        <Especialidad codigo="CH0086ETRA" sistemaCodificacion="TELECITA" />
+        <Prestacion codigo="CH0086C00.1" sistemaCodificacion="TELECITA" />
+      </ns2:Agenda>
+    </Hueco>
+    <Hueco>
+      <FechaYHora fecha="2006-05-22" hora="11:00:00.000+02:00" />
+      <ns3:Agenda codigo="ARR_TRA2" sistemaCodificacion="TELECITA" xmlns:ns3="http://selenetelecita.selene.salud.siemens.es/v1/agenda">
+        <Especialista cias="1609840014W" />
+        <Servicio codigo="CH0086TRA" sistemaCodificacion="TELECITA" />
+        <Especialidad codigo="CH0086ETRA" sistemaCodificacion="TELECITA" />
+        <Prestacion codigo="CH0086C00.1" sistemaCodificacion="TELECITA" />
+      </ns3:Agenda>
+    </Hueco>
+    <Hueco>
+      <FechaYHora fecha="2006-05-22" hora="11:24:00.000+02:00" />
+      <ns4:Agenda codigo="ARR_TRA2" sistemaCodificacion="TELECITA" xmlns:ns4="http://selenetelecita.selene.salud.siemens.es/v1/agenda">
+        <Especialista cias="1609840014W" />
+        <Servicio codigo="CH0086TRA" sistemaCodificacion="TELECITA" />
+        <Especialidad codigo="CH0086ETRA" sistemaCodificacion="TELECITA" />
+        <Prestacion codigo="CH0086C00.1" sistemaCodificacion="TELECITA" />
+      </ns4:Agenda>
+    </Hueco>
+    <Hueco>
+      <FechaYHora fecha="2006-06-28" hora="12:48:00.000+02:00" />
+      <ns5:Agenda codigo="ARR_TRA2" sistemaCodificacion="TELECITA" xmlns:ns5="http://selenetelecita.selene.salud.siemens.es/v1/agenda">
+        <Especialista cias="1609840014W" />
+        <Servicio codigo="CH0086TRA" sistemaCodificacion="TELECITA" />
+        <Especialidad codigo="CH0086ETRA" sistemaCodificacion="TELECITA" />
+        <Prestacion codigo="CH0086C00.1" sistemaCodificacion="TELECITA" />
+      </ns5:Agenda>
+    </Hueco>
+    <Hueco>
+      <FechaYHora fecha="2006-06-28" hora="13:00:00.000+02:00" />
+      <ns6:Agenda codigo="ARR_TRA2" sistemaCodificacion="TELECITA" xmlns:ns6="http://selenetelecita.selene.salud.siemens.es/v1/agenda">
+        <Especialista cias="1609840014W" />
+        <Servicio codigo="CH0086TRA" sistemaCodificacion="TELECITA" />
+        <Especialidad codigo="CH0086ETRA" sistemaCodificacion="TELECITA" />
+        <Prestacion codigo="CH0086C00.1" sistemaCodificacion="TELECITA" />
+      </ns6:Agenda>
+    </Hueco>
+   </Huecos>
+  </RespuestaHuecosDisponibles>
+ </OperacionResult>
+</OperacionResponse>

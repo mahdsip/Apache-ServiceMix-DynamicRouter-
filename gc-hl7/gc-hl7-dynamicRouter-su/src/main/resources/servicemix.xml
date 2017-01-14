@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<beans xmlns:sm="http://servicemix.apache.org/config/1.0"
+       xmlns:gc-hl7="http://selene.com/servicemix/gc-hl7">
+
+    <classpath>
+        <location>.</location>
+    </classpath>
+
+    <sm:serviceunit id="jbi">
+
+        <sm:activationSpecs>
+            <!-- Put lw components here -->
+            <sm:activationSpec componentName="HL7dynamicRouter"
+                               service="gc-hl7:dynamicRouter"
+                               endpoint="endpoint">
+             	<sm:component>
+								<bean class="es.altana.multidominio.dynamicRouter.DynamicRouter">
+									<property name="serviceName" value="gc-hl7"/>
+  								<property name="destinationsPath" value="XCN.1"/>
+  								<property name="targetEndpointName" value="wireTap2"/>
+								</bean>
+							</sm:component>  
+            </sm:activationSpec>
+        </sm:activationSpecs>
+
+    </sm:serviceunit>
+
+</beans>

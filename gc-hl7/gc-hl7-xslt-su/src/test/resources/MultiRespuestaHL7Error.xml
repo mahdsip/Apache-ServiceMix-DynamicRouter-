@@ -1,0 +1,38 @@
+<TOTALRESPONSE>
+   <REQUEST>
+      <RESULT>
+         <RESPONSE>
+            <ERROR>No se ha obtenido respuesta del destino1</ERROR>
+
+            <ENDPOINT>NoValido:Onco</ENDPOINT>
+         </RESPONSE>
+      </RESULT>
+   </REQUEST>
+
+   <REQUEST>
+      <RESULT>
+         <RESPONSE>
+            <ERROR>No se ha obtenido respuesta del destino2</ERROR>
+
+            <ENDPOINT>NoValido: Materno</ENDPOINT>
+         </RESPONSE>
+      </RESULT>
+   </REQUEST>
+   
+   <REQUEST>
+      <RESULT>
+         <RESPONSE>
+            <ERROR>No se ha obtenido respuesta del destino3</ERROR>
+
+            <ENDPOINT>NoValido: Destino</ENDPOINT>
+         </RESPONSE>
+      </RESULT>
+   </REQUEST>
+
+   <REQUEST>
+      <RESULT>
+         <ERROR>No se ha obtenido respuesta de ningun destino</ERROR>
+      </RESULT>
+   </REQUEST>
+</TOTALRESPONSE>
+

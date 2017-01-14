@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    
+    Copyright 2006 Selene I+D+I
+    
+-->
+<project
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>es.altana.selene-hup-gsm</groupId>
+        <artifactId>gcc</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <groupId>es.altana.selene-hup-gsm.gcc</groupId>
+    <artifactId>gcc-jms-su</artifactId>
+    <name>Selene :: HUP-GSM: GCC :: GCC-JMS-SU</name>
+    <description>
+        Service Init (SU) jms. Unidad de Servicio que se encarga de de enviar los mensajes
+        a distintas colas JMS. 
+    </description>
+    
+    <dependencies>
+    	<dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-jms_1.1_spec</artifactId>
+            <version>1.1</version>
+    	</dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+        		<plugin>
+                <artifactId>maven-site-plugin</artifactId>
+                <configuration>
+                   <outputDirectory>${basedir}/../target/site/gcc-jms-su</outputDirectory>
+                </configuration>
+            </plugin>
+        	        
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.servicemix.tooling</groupId>
+                <artifactId>xfire-maven-plugin</artifactId>
+                <version>3.1-incubating</version>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.apache.servicemix.tooling</groupId>
+                <artifactId>jbi-maven-plugin</artifactId>
+                <version>3.1-incubating</version>
+                <extensions>true</extensions>
+            </plugin>
+        </plugins>
+    </build>
+    
+    
+</project>
+
+    

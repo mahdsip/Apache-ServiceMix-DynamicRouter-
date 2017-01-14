@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>es.altana.selene-hup-gsm</groupId>
+        <artifactId>gc-hl7</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <groupId>es.altana.selene-hup-gsm.gc-hl7</groupId>
+    <artifactId>gc-hl7-eip-su</artifactId>
+    <name>Selene :: HUP-GSM: GC-HL7 :: GC-HL7-EIP-SU</name>
+    <description>
+        Service Init (SU) EIP (Enterprise Integration Pattern) 
+    </description>
+
+    <!--<packaging>jbi-service-unit</packaging>-->
+    <version>1.0</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.servicemix</groupId>
+            <artifactId>servicemix-eip</artifactId>
+            <version>3.1-incubating-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.servicemix.tooling</groupId>
+                <artifactId>jbi-maven-plugin</artifactId>
+                <version>3.1-incubating-SNAPSHOT</version>
+                <extensions>true</extensions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-site-plugin</artifactId>
+                <configuration>
+                   <outputDirectory>${basedir}/../target/site/gts-eip-su</outputDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

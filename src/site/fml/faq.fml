@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<faqs id="General FAQ">
+  <part id="General">
+    <faq id="donde">
+      <question>¿De donde viene AmiVital?</question>
+      <answer>
+        <p>
+          AmiVital es un evolución del proyecto GTS (Global Teleasistence System)
+        </p>
+      </answer>
+    </faq>
+    <faq id="por que">
+      <question>¿Por que AmiVital?</question>
+      <answer>
+        <p>
+            La futura ley de dependencia incita a la inversión y desarrollo de proyectos orientados a colectivos
+            desfavorecidos tradicionalmente como son: ancianos, enfermos crónicos.
+        </p>
+      </answer>
+    </faq>
+  </part>
+</faqs>

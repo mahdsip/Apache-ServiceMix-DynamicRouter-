@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    
+    Copyright 2006 Selene I+D+I
+    
+-->
+<project
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>es.altana.selene-hup-gsm</groupId>
+        <artifactId>md</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <groupId>es.altana.selene-hup-gsm.md</groupId>
+    <artifactId>md-dominio6-su</artifactId>
+    <name>Selene :: HUP-GSM: MD :: MD-DOMINIO6-SU</name>
+    <description>
+        Service Init (SU) con los servicios del dominio2.
+    </description>
+
+	  <version>1.0</version>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-site-plugin</artifactId>
+                <configuration>
+                   <outputDirectory>${basedir}/../target/site/md-dominio6-su</outputDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

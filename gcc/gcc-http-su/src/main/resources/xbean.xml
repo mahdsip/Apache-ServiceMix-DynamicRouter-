@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<beans xmlns:http="http://servicemix.apache.org/http/1.0"
+       xmlns:gcc="http://selene.com/servicemix/gcc">
+    
+    <classpath>
+        <location>.</location>
+    </classpath>
+
+	<http:endpoint service="gcc:wireTap"
+	               endpoint="wireTap"
+	               role="consumer" 
+	               defaultMep="http://www.w3.org/2004/08/wsdl/in-out"
+	               locationURI="http://localhost:8080/PeticionesService"
+	               soap="true"
+	               soapVersion="1.1"
+	               wsdlResource="classpath:selenetelecita.wsdl"
+	               />
+</beans>

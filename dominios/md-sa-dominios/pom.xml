@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    
+    Copyright 2006 Selene I+D+I
+    
+-->
+<project
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>es.altana.selene-hup-gsm</groupId>
+        <artifactId>md</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <groupId>es.altana.selene-hup-gsm.md</groupId>
+    <artifactId>md-sa-dominios</artifactId>
+    <name>Selene :: HUP-GSM: MD :: MULTIDOMINIOS-SA-DOMINIOS</name>
+    <description>
+        Service Asembly (SA) Servicio de ensamblaje para el despliegue del dominio1 y dominio2. 
+    </description>
+
+    <packaging>pom</packaging>
+
+    <dependencies>
+              
+         <dependency>
+            <groupId>es.altana.selene-hup-gsm.md</groupId>
+            <artifactId>md-dominio1-su</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>es.altana.selene-hup-gsm.md</groupId>
+            <artifactId>md-dominio2-su</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>es.altana.selene-hup-gsm.md</groupId>
+            <artifactId>md-dominio3-su</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>es.altana.selene-hup-gsm.md</groupId>
+            <artifactId>md-dominio4-su</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>es.altana.selene-hup-gsm.md</groupId>
+            <artifactId>md-dominio5-su</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>es.altana.selene-hup-gsm.md</groupId>
+            <artifactId>md-dominio6-su</artifactId>
+            <version>1.0</version>
+        </dependency>
+           
+    </dependencies>
+  
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.1</version>
+                <executions>
+                    <execution>
+                        <id>bin</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <descriptors>
+                                <descriptor>src/main/assembly/bin.xml</descriptor>
+                            </descriptors>
+                            <finalName>${pom.artifactId}-${pom.version}</finalName>
+                            <appendAssemblyId>false</appendAssemblyId>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-site-plugin</artifactId>
+                <configuration>
+                   <outputDirectory>${basedir}/../target/site/md-sa-dominios</outputDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

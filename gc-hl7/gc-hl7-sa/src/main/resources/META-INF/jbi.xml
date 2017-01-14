@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" version="1.0">
+
+    <service-assembly>
+        <identification>
+            <name>GCHL7</name>
+            <description>Gestor Centralizado HL7</description>
+        </identification>
+        <service-unit>
+            <identification>
+                <name>gc-hl7-http-su</name>
+                <description>peticiones</description>
+            </identification>
+            <target>
+                <artifacts-zip>gc-hl7-http-su-1.0.jar</artifacts-zip>
+                <component-name>servicemix-http</component-name>
+            </target>
+        </service-unit>
+        
+              
+        <service-unit>  
+  		      <identification>
+                <name>gc-hl7-eip-su</name>
+                <description>Enterprise Integration Patterns Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>gc-hl7-eip-su-1.0.jar</artifacts-zip>
+                <component-name>servicemix-eip</component-name>
+            </target>
+        </service-unit>
+        
+        <service-unit>
+            <identification>
+                <name>gc-hl7-dynamicRouter-su</name>
+                <description>Router Dinámico</description>
+            </identification>
+            <target>
+                <artifacts-zip>gc-hl7-dynamicRouter-su-1.0.jar</artifacts-zip>
+                <component-name>servicemix-lwcontainer</component-name>
+            </target>
+        </service-unit>
+      
+        <service-unit>
+            <identification>
+                <name>gc-hl7-xslt-su</name>
+                <description>XSLT Trasnformer Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>gc-hl7-xslt-su-1.0.jar</artifacts-zip>
+                <component-name>servicemix-saxon</component-name>
+            </target>
+        </service-unit>
+        <service-unit>
+            <identification>
+                <name>gc-hl7-jms-su</name>
+                <description>JMS Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>gc-hl7-jms-su-1.0.jar</artifacts-zip>
+                <component-name>servicemix-jms</component-name>
+            </target>
+        </service-unit>
+        
+        <!--
+        <service-unit>
+            <identification>
+                <name>gts-logger-su</name>
+                <description>Logger Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>gts-logger-su-1.0.jar</artifacts-zip>
+                <component-name>servicemix-lwcontainer</component-name>
+            </target>
+        </service-unit>
+        <service-unit>
+            <identification>
+                <name>gts-file-su</name>
+                <description>File Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>gts-file-su-1.0.jar</artifacts-zip>
+                <component-name>servicemix-lwcontainer</component-name>
+            </target>
+        </service-unit>
+        <service-unit>
+            <identification>
+                <name>gts-selene-su</name>
+                <description>Selene Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>gts-selene-su-1.0.jar</artifacts-zip>
+                <component-name>servicemix-http</component-name>
+            </target>
+        </service-unit>
+        <service-unit>
+            <identification>
+                <name>gts-galarmas-su</name>
+                <description>Galarmas Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>gts-galarmas-su-1.0.jar</artifacts-zip>
+                <component-name>servicemix-http</component-name>
+            </target>
+        </service-unit>
+        
+        <service-unit>
+            <identification>
+                <name>gts-jms-su</name>
+                <description>JMS Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>gts-jms-su-1.0.jar</artifacts-zip>
+                <component-name>servicemix-jms</component-name>
+            </target>
+        </service-unit>
+        -->
+    </service-assembly>
+</jbi>

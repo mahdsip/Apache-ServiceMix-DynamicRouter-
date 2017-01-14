@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<beans xmlns:eip="http://servicemix.apache.org/eip/1.0"
+       xmlns:gc-hl7="http://selene.com/servicemix/gc-hl7"
+       xmlns:shl7="http://selene.com/hl7/v1/"
+        >
+
+    <eip:wire-tap service="gc-hl7:wireTap" endpoint="wireTap">
+        <eip:target>
+            <eip:exchange-target service="gc-hl7:dynamicRouter"/>
+        </eip:target>
+        <eip:inListener>
+            <eip:exchange-target service="gc-hl7:jms-REQUEST"/>
+        </eip:inListener>
+    </eip:wire-tap>
+    
+        <eip:wire-tap service="gc-hl7:wireTap2" endpoint="wireTap2">
+        <eip:target>
+            <eip:exchange-target service="gc-hl7:xslt"/>
+        </eip:target>
+        <eip:inListener>
+            <eip:exchange-target service="gc-hl7:jms-RESULT"/>
+        </eip:inListener>
+    </eip:wire-tap>
+
+	
+    <eip:namespace-context id="nsContext">
+        <eip:namespaces>
+            <eip:namespace prefix="gc-hl7">http://selene.com/servicemix/gc-hl7</eip:namespace>
+        </eip:namespaces>
+    </eip:namespace-context>
+</beans>

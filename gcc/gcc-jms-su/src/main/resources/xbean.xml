@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<beans xmlns:jms="http://servicemix.apache.org/jms/1.0"
+       xmlns:gcc="http://selene.com/servicemix/gcc">
+    
+      <jms:endpoint service="gcc:jms-REQUEST"
+              endpoint="jms-REQUEST"
+              role="provider"
+              soap="true"
+              connectionFactory="#connectionFactory"
+              destinationStyle="queue"
+              jmsProviderDestinationName="md.peticiones"
+              />
+   	
+      
+     <jms:endpoint service="gcc:jms-RESULT"
+              endpoint="jms-RESULT"
+              role="provider"
+              soap="true"
+              connectionFactory="#connectionFactory"
+              destinationStyle="queue"
+              jmsProviderDestinationName="md.respuestas"
+              />
+              
+           
+<bean id="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+  	<property name="brokerURL" value="tcp://localhost:61616" />  
+</bean>
+   
+
+</beans>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<beans xmlns:http="http://servicemix.apache.org/http/1.0"
+       xmlns:gcc="http://selene.com/servicemix/gcc"
+       xmlns:gc-hl7="http://selene.com/servicemix/gc-hl7"
+       xmlns:gw="http://selene.com/servicemix/gw">
+    
+    <classpath>
+        <location>.</location>
+    </classpath>
+
+	<http:endpoint service="gcc:dominio5"
+	               endpoint="dominio5"
+	               role="provider" 
+	               defaultMep="http://www.w3.org/2004/08/wsdl/in-out"
+	               locationURI="http://localhost:8080/md-dominio2-web-1.0/PeticionesService"
+	               soap="true"
+	               soapVersion="1.1"
+	           
+	               />
+	 <http:endpoint service="gc-hl7:dominio5"
+	               endpoint="dominio5"
+	               role="provider" 
+	               defaultMep="http://www.w3.org/2004/08/wsdl/in-out"
+	               locationURI="http://localhost:8080/md-dominio2-web-1.0/HL7Service"
+	               soap="true"
+	               soapVersion="1.1"
+	           
+	               />
+	 <http:endpoint service="gw:dominio5"
+	               endpoint="dominio5"
+	               role="provider" 
+	               defaultMep="http://www.w3.org/2004/08/wsdl/in-out"
+	               locationURI="http://localhost:8080/md-dominio2-web-1.0/GatewayService"
+	               soap="true"
+	               soapVersion="1.1"
+	               />
+</beans>

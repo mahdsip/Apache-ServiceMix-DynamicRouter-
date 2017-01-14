@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="GTS">
+  <bannerLeft>
+    <name>GTS</name>
+    <src>http://maven.apache.org/images/apache-maven-project.png</src>
+    <href>http://maven.apache.org/</href>
+  </bannerLeft>
+  <bannerRight>
+    <src>http://maven.apache.org/images/maven-small.gif</src>
+  </bannerRight>
+  <body>
+    <links>
+      <item name="GTS" href="file://index.html"/>
+      <item name="Apache" href="http://www.apache.org/" />
+      <item name="Maven 2" href="http://maven.apache.org/maven2/"/>
+    </links>
+
+    <menu name="GTS_EN 1.0">
+      <item name="FAQ" href="faq.html"/>
+      <item name="Xdoc Example" href="xdoc.html"/>
+    </menu>
+    <menu ref="modules" />
+    <menu ref="reports" />
+  </body>
+</project>

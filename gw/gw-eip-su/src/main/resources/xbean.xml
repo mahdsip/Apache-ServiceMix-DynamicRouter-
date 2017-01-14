@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<beans xmlns:eip="http://servicemix.apache.org/eip/1.0"
+       xmlns:gw="http://selene.com/servicemix/gw"
+       xmlns:shl7="http://selene.com/hl7/v1/"
+        >
+        
+<eip:content-based-router service="gw:router" endpoint="router">
+        <eip:rules>
+            <eip:routing-rule>
+                <eip:predicate>
+                    <eip:xpath-predicate xpath="/Destino = &quot;Dominio1&quot;"
+                                         namespaceContext="#nsContext"/>
+                </eip:predicate>
+               <eip:target>
+                    <eip:exchange-target service="gw:Materno Infantil"/>
+                </eip:target>
+            </eip:routing-rule>
+            <eip:routing-rule>
+                <eip:predicate>
+                    <eip:xpath-predicate xpath="/Destino = &quot;Dominio2&quot;"
+                                         namespaceContext="#nsContext"/>
+                </eip:predicate>
+                <eip:target>
+                    <eip:exchange-target service="gw:Oncologico"/>
+                </eip:target>
+            </eip:routing-rule>
+            <eip:routing-rule>
+                <eip:predicate>
+                    <eip:xpath-predicate xpath="/Destino = &quot;Dominio3&quot;"
+                                         namespaceContext="#nsContext"/>
+                </eip:predicate>
+               <eip:target>
+                    <eip:exchange-target service="gw:Dominio3"/>
+                </eip:target>
+            </eip:routing-rule>
+            
+            <eip:routing-rule>
+                <!-- there is no predicate, so this is the default destination -->
+                <eip:target>
+                    <eip:exchange-target service="gw:error"/>
+                </eip:target>
+            </eip:routing-rule>
+        </eip:rules>
+    </eip:content-based-router>	
+    
+    
+    <eip:namespace-context id="nsContext">
+        <eip:namespaces>
+            <eip:namespace prefix="gw">http://selene.com/servicemix/gw</eip:namespace>
+        </eip:namespaces>
+    </eip:namespace-context>
+</beans>

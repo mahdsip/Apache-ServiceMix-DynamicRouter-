@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    
+    Copyright 2006 Selene I+D+I
+    
+-->
+<project
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>es.altana.md</groupId>
+        <artifactId>md</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <groupId>es.altana.md</groupId>
+    <artifactId>md-dominio2-web</artifactId>
+    <packaging>war</packaging>
+    <name>MD :: DOMINIO2WEB :: Web</name>
+
+    <description>
+       Aplicación Web Dominio2
+    </description>
+    <dependencies>
+      
+        <dependency>
+          <groupId>log4j</groupId>
+          <artifactId>log4j</artifactId>
+          <version>1.2.8</version>
+        </dependency>
+        <dependency>
+          <groupId>commons-logging</groupId>
+          <artifactId>commons-logging</artifactId>
+          <version>1.0.3</version>
+        </dependency>
+        
+          <dependency>
+          <groupId>javax.servlet</groupId>
+          <artifactId>servlet-api</artifactId>
+          <version>2.3</version>
+          <scope>provided</scope>
+        </dependency>
+        
+          <dependency>
+          <groupId>xfire</groupId>
+          <artifactId>saaj-api</artifactId>
+          <version>1.3</version>
+         
+        </dependency>
+        
+        <dependency>
+          <groupId>xfire</groupId>
+          <artifactId>saaj-impl</artifactId>
+          <version>1.3</version>
+        
+        </dependency>
+        
+         <dependency>
+          <groupId>javax.xml</groupId>
+          <artifactId>jaxm-api</artifactId>
+          <version>1.1</version>
+       
+        </dependency>
+        
+        <dependency>
+          <groupId>org.apache.geronimo.specs</groupId>
+          <artifactId>geronimo-activation_1.0.2_spec</artifactId>
+          <version>1.2</version>
+       
+        </dependency>
+
+        
+    </dependencies>
+    
+    <build>
+        <plugins>
+            <plugin>
+              <groupId>org.mortbay.jetty</groupId>
+              <artifactId>maven-jetty-plugin</artifactId>
+              <version>6.1.0</version>
+              <configuration>
+                <scanIntervalSeconds>1</scanIntervalSeconds>
+                <webAppSourceDirectory>${basedir}/src/site</webAppSourceDirectory>
+                <systemProperties>
+                  <systemProperty>
+                    <name>org.mortbay.jetty.webapp.parentLoaderPriority</name>
+                    <value>true</value>
+                  </systemProperty>
+                </systemProperties>
+              </configuration>
+            </plugin>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-war-plugin</artifactId>
+              <version>2.0.2</version>
+              <configuration>
+              </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

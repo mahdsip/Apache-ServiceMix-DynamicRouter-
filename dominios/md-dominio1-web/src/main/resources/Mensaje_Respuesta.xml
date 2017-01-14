@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Header/>
+   <soapenv:Body>
+         <OperacionResponse xmlns="http://selenetelecita.selene.salud.siemens.es/v1/Operations" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">   
+            <OperacionResult>      
+               <RespuestaHuecosDisponibles xmlns="http://selenetelecita.selene.salud.siemens.es/v1/respuestaHuecosDisponibles">         
+                  <ns1:Contexto xmlns:ns1="http://selenetelecita.selene.salud.siemens.es/v1/contexto">            
+                     <Aplicacion xmlns="" nombre="SELENE_TELECITA" version="1.0" />            
+                     <MensajeID xmlns="">SELENE1846</MensajeID>            
+                     <MensajeRaizID xmlns="">SELENE1846</MensajeRaizID>            
+                     <Origen xmlns="">                                             
+                        <Centro codigo="Materno Infantil" sistemaCodificacion="SELENE" />                                       
+                     </Origen>         
+                  </ns1:Contexto>         
+                  <CodigoResultado xmlns="" codigo="0" descripcion="Resultado satisfactorio" sistemaCodificacion="TELECITA" />         
+                  <Huecos xmlns="" fechaYHoraOrigen="2007-07-13T10:30:00+02:00">            
+                     <Hueco>               
+                        <FechaYHora fecha="2007-07-13+02:00" hora="1970-01-01T11:30:00+01:00" />               
+                        <ns2:Agenda xmlns:ns2="http://selenetelecita.selene.salud.siemens.es/v1/agenda" codigo="jrOtra3">                  
+                           <Especialista cias="1601601601R" nombre="medico145 medico145 medico145" />                  
+                           <Servicio codigo="CH0086HOSPITALIZACION A DOMICILIO 3" mostrarComo="Hospitalizacion a Domicilio 3" sistemaCodificacion="SELENE" />                  
+                           <Especialidad codigo="COD_HOSPDOM" mostrarComo="DES HOSPITALIZACION A DOMICILIO" sistemaCodificacion="SELENE" />                  
+                           <Prestacion codigo="COD PRESTA" mostrarComo="DES PRESTA" sistemaCodificacion="SELENE" />                  
+                           <Destino codigo="Materno Infantil" />               
+                        </ns2:Agenda>            
+                     </Hueco>            
+                     <Hueco>               
+                        <FechaYHora fecha="2007-07-16+02:00" hora="1970-01-01T10:00:00+01:00" />               
+                        <ns3:Agenda xmlns:ns3="http://selenetelecita.selene.salud.siemens.es/v1/agenda" codigo="jrOtra3">                  
+                           <Especialista cias="1601601601R" nombre="medico145 medico145 medico145" />                  
+                           <Servicio codigo="CH0086HOSPITALIZACION A DOMICILIO 3" mostrarComo="Hospitalizacion a Domicilio 3" sistemaCodificacion="SELENE" />                  
+                           <Especialidad codigo="COD_HOSPDOM" mostrarComo="DES HOSPITALIZACION A DOMICILIO" sistemaCodificacion="SELENE" />                  
+                           <Prestacion codigo="COD PRESTA" mostrarComo="DES PRESTA" sistemaCodificacion="SELENE" />                  
+                           <Destino codigo="Materno Infantil" />               
+                        </ns3:Agenda>            
+                     </Hueco>            
+                     <Hueco>               
+                        <FechaYHora fecha="2007-07-16+02:00" hora="1970-01-01T10:30:00+01:00" />               
+                        <ns4:Agenda xmlns:ns4="http://selenetelecita.selene.salud.siemens.es/v1/agenda" codigo="jrOtra3">                  
+                           <Especialista cias="1601601601R" nombre="medico145 medico145 medico145" />                  
+                           <Servicio codigo="CH0086HOSPITALIZACION A DOMICILIO 3" mostrarComo="Hospitalizacion a Domicilio 3" sistemaCodificacion="SELENE" />                  
+                           <Especialidad codigo="COD_HOSPDOM" mostrarComo="DES HOSPITALIZACION A DOMICILIO" sistemaCodificacion="SELENE" />                  
+                           <Prestacion codigo="COD PRESTA" mostrarComo="DES PRESTA" sistemaCodificacion="SELENE" />                  
+                           <Destino codigo="Materno Infantil" />               
+                        </ns4:Agenda>            
+                     </Hueco>            
+                     <Hueco>               
+                        <FechaYHora fecha="2007-07-16+02:00" hora="1970-01-01T11:00:00+01:00" />               
+                        <ns5:Agenda xmlns:ns5="http://selenetelecita.selene.salud.siemens.es/v1/agenda" codigo="jrOtra3">                  
+                           <Especialista cias="1601601601R" nombre="medico145 medico145 medico145" />                  
+                           <Servicio codigo="CH0086HOSPITALIZACION A DOMICILIO 3" mostrarComo="Hospitalizacion a Domicilio 3" sistemaCodificacion="SELENE" />                  
+                           <Especialidad codigo="COD_HOSPDOM" mostrarComo="DES HOSPITALIZACION A DOMICILIO" sistemaCodificacion="SELENE" />                  
+                           <Prestacion codigo="COD PRESTA" mostrarComo="DES PRESTA" sistemaCodificacion="SELENE" />                  
+                           <Destino codigo="Materno Infantil" />               
+                        </ns5:Agenda>            
+                     </Hueco>            
+                     <Hueco>               
+                        <FechaYHora fecha="2007-07-17+02:00" hora="1970-01-01T10:00:00+01:00" />               
+                        <ns6:Agenda xmlns:ns6="http://selenetelecita.selene.salud.siemens.es/v1/agenda" codigo="jrOtra3">                  
+                           <Especialista cias="1601601601R" nombre="medico145 medico145 medico145" />                  
+                           <Servicio codigo="CH0086HOSPITALIZACION A DOMICILIO 3" mostrarComo="Hospitalizacion a Domicilio 3" sistemaCodificacion="SELENE" />                  
+                           <Especialidad codigo="COD_HOSPDOM" mostrarComo="DES HOSPITALIZACION A DOMICILIO" sistemaCodificacion="SELENE" />                  
+                           <Prestacion codigo="COD PRESTA" mostrarComo="DES PRESTA" sistemaCodificacion="SELENE" />                  
+                           <Destino codigo="Materno Infantil" />               
+                        </ns6:Agenda>            
+                     </Hueco>            
+                     <Hueco>               
+                        <FechaYHora fecha="2007-07-17+02:00" hora="1970-01-01T10:30:00+01:00" />               
+                        <ns7:Agenda xmlns:ns7="http://selenetelecita.selene.salud.siemens.es/v1/agenda" codigo="jrOtra3">                  
+                           <Especialista cias="1601601601R" nombre="medico145 medico145 medico145" />                  
+                           <Servicio codigo="CH0086HOSPITALIZACION A DOMICILIO 3" mostrarComo="Hospitalizacion a Domicilio 3" sistemaCodificacion="SELENE" />                  
+                           <Especialidad codigo="COD_HOSPDOM" mostrarComo="DES HOSPITALIZACION A DOMICILIO" sistemaCodificacion="SELENE" />                  
+                           <Prestacion codigo="COD PRESTA" mostrarComo="DES PRESTA" sistemaCodificacion="SELENE" />                  
+                           <Destino codigo="Materno Infantil" />               
+                        </ns7:Agenda>            
+                     </Hueco>            
+                     <Hueco>               
+                        <FechaYHora fecha="2007-07-17+02:00" hora="1970-01-01T11:00:00+01:00" />               
+                        <ns8:Agenda xmlns:ns8="http://selenetelecita.selene.salud.siemens.es/v1/agenda" codigo="jrOtra3">                  
+                           <Especialista cias="1601601601R" nombre="medico145 medico145 medico145" />                  
+                           <Servicio codigo="CH0086HOSPITALIZACION A DOMICILIO 3" mostrarComo="Hospitalizacion a Domicilio 3" sistemaCodificacion="SELENE" />                  
+                           <Especialidad codigo="COD_HOSPDOM" mostrarComo="DES HOSPITALIZACION A DOMICILIO" sistemaCodificacion="SELENE" />                  
+                           <Prestacion codigo="COD PRESTA" mostrarComo="DES PRESTA" sistemaCodificacion="SELENE" />                  
+                           <Destino codigo="Materno Infantil" />               
+                        </ns8:Agenda>            
+                     </Hueco>         
+                  </Huecos>      
+               </RespuestaHuecosDisponibles>   
+            </OperacionResult>
+         </OperacionResponse>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" version="1.0">
+    <service-assembly>
+        <identification>
+            <name>MULTIDOMINIO-SA-DOMINIOS</name>
+            <description>DOMINIOS</description>
+        </identification>       
+         <service-unit>
+            <identification>
+                <name>md-dominio1-su</name>
+                <description>Servicios Web del dominio1</description>
+            </identification>
+            <target>
+                <artifacts-zip>md-dominio1-su-1.0.jar</artifacts-zip>
+                <component-name>servicemix-http</component-name>
+            </target>
+        </service-unit>
+      
+        <service-unit>
+            <identification>
+                <name>md-dominio2-su</name>
+                <description>Servicios Web del dominio2</description>
+            </identification>
+            <target>
+                <artifacts-zip>md-dominio2-su-1.0.jar</artifacts-zip>
+                <component-name>servicemix-http</component-name>
+            </target>
+        </service-unit>
+        
+        <service-unit>
+            <identification>
+                <name>md-dominio3-su</name>
+                <description>Servicios Web del dominio3</description>
+            </identification>
+            <target>
+                <artifacts-zip>md-dominio3-su-1.0.jar</artifacts-zip>
+                <component-name>servicemix-http</component-name>
+            </target>
+        </service-unit>      
+        
+        <service-unit>
+            <identification>
+                <name>md-dominio4-su</name>
+                <description>Servicios Web del dominio4</description>
+            </identification>
+            <target>
+                <artifacts-zip>md-dominio4-su-1.0.jar</artifacts-zip>
+                <component-name>servicemix-http</component-name>
+            </target>
+        </service-unit>      
+        
+        <service-unit>
+            <identification>
+                <name>md-dominio5-su</name>
+                <description>Servicios Web del dominio5</description>
+            </identification>
+            <target>
+                <artifacts-zip>md-dominio5-su-1.0.jar</artifacts-zip>
+                <component-name>servicemix-http</component-name>
+            </target>
+        </service-unit>      
+        
+        <service-unit>
+            <identification>
+                <name>md-dominio6-su</name>
+                <description>Servicios Web del dominio6</description>
+            </identification>
+            <target>
+                <artifacts-zip>md-dominio6-su-1.0.jar</artifacts-zip>
+                <component-name>servicemix-http</component-name>
+            </target>
+        </service-unit>            
+          
+    </service-assembly>
+</jbi>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<beans xmlns:saxon="http://servicemix.apache.org/saxon/1.0"
+	   xmlns:gc-hl7="http://selene.com/servicemix/gc-hl7">
+			 
+	<classpath>
+        <location>.</location>
+  	</classpath>
+  
+	<saxon:xslt service="gc-hl7:xslt" 
+				endpoint="xslt"
+            	resource="classpath:MultiRespuesta.xsl"
+            	 />
+</beans>
+
+

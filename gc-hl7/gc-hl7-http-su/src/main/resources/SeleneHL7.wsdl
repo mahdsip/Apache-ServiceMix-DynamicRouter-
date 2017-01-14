@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:hl7="urn:hl7-org:v2xml2" xmlns:hl7_1="urn:hl7-org:v2xml" xmlns:hl7_2="urn:hl7-org:v2xml" xmlns:shl7="http://selene.com/hl7/v1/" targetNamespace="http://selene.com/hl7/v1/">
+	<wsdl:types>
+		<xsd:schema elementFormDefault="qualified" targetNamespace="urn:hl7-org:v2xml2">
+		<xsd:import namespace="urn:hl7-org:v2xml" schemaLocation="MFN_M01.xsd" id="hl7_1" />
+		<xsd:import namespace="urn:hl7-org:v2xml" schemaLocation="MFR_M01.xsd" id="hl7_2"/>
+				<xsd:complexType name="MFN_M01">
+					<xsd:sequence>
+						<xsd:element ref="hl7_1:MFN_M01" minOccurs="1" maxOccurs="1"/>
+					</xsd:sequence>
+				</xsd:complexType>
+				<xsd:complexType name="MFR_M01">
+					<xsd:sequence>
+						<xsd:element ref="hl7_2:MFR_M01" minOccurs="1" maxOccurs="1"/>
+					</xsd:sequence>
+				</xsd:complexType>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="operacionSoapIn">
+		<wsdl:part name="parameters" element="hl7_1:MFN_M01"/>
+	</wsdl:message>
+	<wsdl:message name="operacionSoapOut">
+		<wsdl:part name="parameters" element="hl7_2:MFR_M01"/>
+	</wsdl:message>
+	<wsdl:portType name="SeleneHL7Service">
+		<wsdl:operation name="operacion">
+			<wsdl:input message="shl7:operacionSoapIn"/>
+			<wsdl:output message="shl7:operacionSoapOut"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="SeleneHL7Service" type="shl7:SeleneHL7Service">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="operacion">
+			<soap:operation soapAction="http://10.10.1.33:8080//SeleneHL7Service" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="SeleneHL7Service">
+		<wsdl:port name="SeleneHL7Service" binding="shl7:SeleneHL7Service">
+			<soap:address location="http://10.10.1.33:8080/apache-servicemix-web-3.1.1-incubating/jbi/HL7Service"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

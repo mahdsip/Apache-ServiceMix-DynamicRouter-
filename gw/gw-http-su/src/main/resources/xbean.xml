@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<beans xmlns:http="http://servicemix.apache.org/http/1.0"
+       xmlns:gw="http://selene.com/servicemix/gw">
+    
+    <classpath>
+        <location>.</location>
+    </classpath>
+
+	<http:endpoint service="gw:router"
+	               endpoint="router"
+	               role="consumer" 
+	               defaultMep="http://www.w3.org/2004/08/wsdl/in-out"
+	               locationURI="http://localhost:8080/Gateway"
+	               soap="true"
+	               soapVersion="1.1"
+	               />
+</beans>

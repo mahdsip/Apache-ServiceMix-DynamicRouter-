@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    
+    Copyright 2006 Selene I+D+I
+    
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>es.altana</groupId>
+        <artifactId>selene-hup-gsm</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <groupId>es.altana.selene-hup-gsm</groupId>
+    <artifactId>gc-hl7</artifactId>
+    <version>1.0</version>
+    <name>Selene :: HUP-GSM: GC-HL7</name>
+    <description>
+    Gestor de Citas Centralizado
+    </description>
+    <url></url>
+    <packaging>pom</packaging>
+    <inceptionYear>2007</inceptionYear>
+
+    <modules>
+        <module>gc-hl7-http-su</module>
+        <module>gc-hl7-eip-su</module>
+        <module>gc-hl7-dynamicRouter-su</module>
+        <module>gc-hl7-xslt-su</module>
+        <module>gc-hl7-jms-su</module>
+        <module>gc-hl7-sa</module>
+    </modules>
+
+    <repositories>
+        <repository>
+            <id>servicemix-m2-repo</id>
+            <name>Servicemix Maven2 Repository</name>
+            <url>http://servicemix.org/m2-repo</url>
+        </repository>
+
+        <repository>
+            <id>servicemix-m2-people-repo</id>
+            <name>Servicemix Maven2 People Repository</name>
+            <url>http://people.apache.org/repo/m2-incubating-repository</url>
+        </repository>
+
+        <repository>
+            <id>localhost-m2-repo</id>
+            <name>Localhost Maven2 Repository</name>
+            <url>file://C:\Software\Apache\mv2-repo</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>apache.snapshots</id>
+            <name>Maven Central Plugins Development Repository</name>
+            <url>http://cvs.apache.org/maven-snapshot-repository</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>apache</id>
+            <name>Maven Central Plugins Repository</name>
+            <url>http://repo1.maven.org/maven2</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.1</version>
+                <inherited>false</inherited>
+                <executions>
+                    <execution>
+                        <id>src</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <descriptors>
+                                <descriptor>src/main/assembly/src.xml</descriptor>
+                            </descriptors>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.5</source>
+                        <target>1.5</target>
+                        <showDeprecation>true</showDeprecation>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <configuration>
+                        <encoding>ISO-8859-1</encoding>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <configuration>
+                        <webResources>
+                            <resource>
+                                <directory>${project.build.directory}/generated-sources/webdoclet</directory>
+                            </resource>
+                        </webResources>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <configuration>
+                        <excludes>
+                            <!--
+                                                        <exclude>**/*DBTest.java</exclude>
+                                                        <exclude>**/*TcpipXBeanDeployerTest.java</exclude>
+                            -->
+                        </excludes>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>maven-plugins</groupId>
+                    <artifactId>maven-dotuml-plugin</artifactId>
+                    <version>1.0</version>
+
+                    <configuration>
+                        <destdir>${maven.build.dir}</destdir>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <configuration>
+                        <locales>es,en</locales>
+                    </configuration>
+                    <!--
+                                        <configuration>
+                                           <siteDirectory>${basedir}/src/site</siteDirectory>
+                                           <xdocDirectory>${basedir}/src/site/xdoc</xdocDirectory>
+                                        </configuration>
+                    -->
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <artifactId>maven-javadoc-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>maven-plugins</groupId>
+                <artifactId>maven-dotuml-plugin</artifactId>
+                <version>1.0</version>
+                <configuration>
+                    <destdir>${maven.build.dir}</destdir>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </reporting>
+</project>

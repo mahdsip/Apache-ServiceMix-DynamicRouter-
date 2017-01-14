@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>es.altana.selene-hup-gsm</groupId>
+        <artifactId>gc-hl7</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <groupId>es.altana.selene-hup-gsm.gc-hl7</groupId>
+    <artifactId>gc-hl7-xslt-su</artifactId>
+    <name>Selene :: HUP-GSM: GC-HL7 :: GC-HL7-XSLT-SU</name>
+    <description>
+    Service Init (SU) XSLT. Service Unit que despliega la serie de transformaciones de mensajes necesarios en Multidominio.
+        - MD2HL7
+    </description>
+
+    <!--<packaging>jbi-service-unit</packaging>-->
+    <version>1.0</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.servicemix</groupId>
+            <artifactId>servicemix-lwcontainer</artifactId>
+            <version>3.1-incubating-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicemix</groupId>
+            <artifactId>servicemix-components</artifactId>
+            <version>3.1-incubating-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.0.4</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.9</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.servicemix.tooling</groupId>
+                <artifactId>jbi-maven-plugin</artifactId>
+                <version>3.1-incubating-SNAPSHOT</version>
+                <extensions>true</extensions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-site-plugin</artifactId>
+                <configuration>
+                   <outputDirectory>${basedir}/../target/site/gc-hl7-xslt-su</outputDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <reporting>
+        <outputDirectory>${basedir}/../target/site/gc-hl7-xslt-su/</outputDirectory>
+        <plugins>
+            <plugin>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <configuration>
+                   <outputDirectory>${basedir}/../target/site/gc-hl7-xslt-su/apidocs</outputDirectory>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>2.0.1</version>
+                <configuration>
+                  <linkJavadoc>true</linkJavadoc>
+                  <javadocDir>${basedir}/../target/site/gc-hl7-xslt-su/apidocs</javadocDir>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+</project>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly>
+    <id>bin</id>
+    <formats>
+        <format>jar</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <fileSet>
+            <directory>src/main/resources</directory>
+            <outputDirectory>/</outputDirectory>
+        </fileSet>
+    </fileSets>
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>/</outputDirectory>
+            <unpack>false</unpack>
+            <scope>runtime</scope>
+            <includes>
+                <include>es.altana.selene-hup-gsm.gcc:gcc-eip-su</include>
+                <include>es.altana.selene-hup-gsm.gcc:gcc-http-su</include>
+                <!--
+                <include>es.altana.selene-hup-gsm.gcc:gcc-dynamicRouter-su</include>
+                -->
+                <include>es.altana.selene-hup-gsm.gcc:gcc-xslt-su</include>
+                <include>es.altana.selene-hup-gsm.gcc:gcc-jms-su</include>
+            </includes>
+        </dependencySet>
+    </dependencySets>
+</assembly>

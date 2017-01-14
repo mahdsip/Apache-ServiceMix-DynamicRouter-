@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<beans xmlns:sm="http://servicemix.apache.org/config/1.0"
+       xmlns:gcc="http://selene.com/servicemix/gcc">
+
+    <classpath>
+        <location>.</location>
+    </classpath>
+
+    <sm:serviceunit id="jbi">
+
+        <sm:activationSpecs>
+            <!-- Put lw components here -->
+            <sm:activationSpec componentName="dynamicRouter"
+                               service="gcc:dynamicRouter"
+                               endpoint="endpoint">
+             	<sm:component>
+								<bean class="es.altana.multidominio.dynamicRouter.DynamicRouter">
+									<property name="serviceName" value="gcc"/>
+  								<property name="destinationsPath" value="XCN.1"/>
+  								<property name="targetEndpointName" value="wireTap2"/>
+								</bean>
+							</sm:component>  
+            </sm:activationSpec>
+        </sm:activationSpecs>
+
+    </sm:serviceunit>
+
+</beans>

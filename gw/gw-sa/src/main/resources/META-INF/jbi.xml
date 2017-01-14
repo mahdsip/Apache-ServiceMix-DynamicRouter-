@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" version="1.0">
+
+    <service-assembly>
+        <identification>
+            <name>GATEWAY</name>
+            <description>GATEWAY</description>
+        </identification>
+        <service-unit>
+            <identification>
+                <name>gw-http-su</name>
+                <description>Consumidor http de las peticiones al servicio de pasarela</description>
+            </identification>
+            <target>
+                <artifacts-zip>gw-http-su-1.0.jar</artifacts-zip>
+                <component-name>servicemix-http</component-name>
+            </target>
+        </service-unit>
+        <service-unit>  
+  		      <identification>
+                <name>gw-eip-su</name>
+                <description>Enterprise Integration Patterns Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>gw-eip-su-1.0.jar</artifacts-zip>
+                <component-name>servicemix-eip</component-name>
+            </target>
+        </service-unit>
+    </service-assembly>
+</jbi>

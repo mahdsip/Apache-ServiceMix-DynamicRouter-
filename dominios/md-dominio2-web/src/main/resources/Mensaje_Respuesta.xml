@@ -1,0 +1,42 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+<soapenv:Header/>
+<soapenv:Body>
+<OperacionResponse xmlns="http://selenetelecita.selene.salud.siemens.es/v1/Operations">
+ <OperacionResult>
+  <RespuestaHuecosDisponibles xmlns="http://selenetelecita.selene.salud.siemens.es/v1/respuestaHuecosDisponibles">
+   <ns1:Contexto xmlns:ns1="http://selenetelecita.selene.salud.siemens.es/v1/contexto">
+    <Aplicacion nombre="TELECITA" version="1.0" xmlns="" />
+    <MensajeID xmlns="">0</MensajeID>
+    <MensajeRaizID xmlns="">0</MensajeRaizID>
+    <Origen xmlns="">
+      <Centro codigo="16090410" nombre="C. S. NARANJO" sistemaCodificacion="TELECITA" />
+    </Origen>
+   </ns1:Contexto>
+   <CodigoResultado codigo="0" descripcion="Resultado satisfactorio" sistemaCodificacion="TELECITA" xmlns="" />
+   <Huecos fechaYHoraOrigen="2006-05-19T13:00:00.000+02:00" xmlns="">
+                     <Hueco>               
+                        <FechaYHora fecha="2007-07-13+02:00" hora="1970-01-01T13:30:00+01:00" />               
+                        <ns2:Agenda xmlns:ns2="http://selenetelecita.selene.salud.siemens.es/v1/agenda" codigo="jrOtra3">                  
+                           <Especialista cias="1601601601R" nombre="medico145 medico145 medico145" />                  
+                           <Servicio codigo="CH0086HOSPITALIZACION A DOMICILIO 3" mostrarComo="Hospitalizacion a Domicilio 3" sistemaCodificacion="SELENE" />                  
+                           <Especialidad codigo="COD_HOSPDOM" mostrarComo="DES HOSPITALIZACION A DOMICILIO" sistemaCodificacion="SELENE" />                  
+                           <Prestacion codigo="COD PRESTA" mostrarComo="DES PRESTA" sistemaCodificacion="SELENE" />                  
+                           <Destino codigo="Oncologico" />               
+                        </ns2:Agenda>            
+                     </Hueco>            
+                     <Hueco>               
+                        <FechaYHora fecha="2007-07-16+02:00" hora="1970-01-01T12:00:00+01:00" />               
+                        <ns3:Agenda xmlns:ns3="http://selenetelecita.selene.salud.siemens.es/v1/agenda" codigo="jrOtra3">                  
+                           <Especialista cias="1601601601R" nombre="medico145 medico145 medico145" />                  
+                           <Servicio codigo="CH0086HOSPITALIZACION A DOMICILIO 3" mostrarComo="Hospitalizacion a Domicilio 3" sistemaCodificacion="SELENE" />                  
+                           <Especialidad codigo="COD_HOSPDOM" mostrarComo="DES HOSPITALIZACION A DOMICILIO" sistemaCodificacion="SELENE" />                  
+                           <Prestacion codigo="COD PRESTA" mostrarComo="DES PRESTA" sistemaCodificacion="SELENE" />                  
+                           <Destino codigo="Oncologico" />               
+                        </ns3:Agenda>            
+                     </Hueco>            
+   </Huecos>
+  </RespuestaHuecosDisponibles>
+ </OperacionResult>
+</OperacionResponse>
+</soapenv:Body>
+</soapenv:Envelope>

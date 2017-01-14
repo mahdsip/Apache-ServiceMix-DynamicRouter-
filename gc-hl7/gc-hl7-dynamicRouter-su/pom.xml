@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>es.altana.selene-hup-gsm</groupId>
+        <artifactId>gc-hl7</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <groupId>es.altana.selene-hup-gsm.gc-hl7</groupId>
+    <artifactId>gc-hl7-dynamicRouter-su</artifactId>
+    <name>Selene :: HUP-GSM: GC-HL7 :: GC-HL7-DYNAMICROUTER-SU</name>
+    <description>
+        Service Init (SU) File. Service Unit que se encarga de Enviar a varios destinos indicados en el mensaje.
+    </description>
+
+    <!--<packaging>jbi-service-unit</packaging>-->
+    <version>1.0</version>
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.servicemix.tooling</groupId>
+                <artifactId>jbi-maven-plugin</artifactId>
+                <version>3.1-incubating-SNAPSHOT</version>
+                <extensions>true</extensions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-site-plugin</artifactId>
+                <configuration>
+                   <outputDirectory>${basedir}/../target/site/gc-hl7-dynamicRouter-su</outputDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.servicemix</groupId>
+            <artifactId>servicemix-lwcontainer</artifactId>
+            <version>3.1-incubating-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicemix</groupId>
+            <artifactId>servicemix-components</artifactId>
+            <version>3.1-incubating-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>es.altana.md</groupId>
+            <artifactId>dynamicRouter</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+</project>

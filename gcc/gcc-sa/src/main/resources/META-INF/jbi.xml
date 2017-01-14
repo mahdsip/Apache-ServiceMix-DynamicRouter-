@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" version="1.0">
+
+    <service-assembly>
+        <identification>
+            <name>GCC</name>
+            <description>Gestor Centralizado Citas</description>
+        </identification>
+        <service-unit>
+            <identification>
+                <name>gcc-http-su</name>
+                <description>peticiones</description>
+            </identification>
+            <target>
+                <artifacts-zip>gcc-http-su-1.0.jar</artifacts-zip>
+                <component-name>servicemix-http</component-name>
+            </target>
+        </service-unit>
+        
+       
+        <service-unit>
+            <identification>
+                <name>gcc-dynamicRouter-su</name>
+                <description>Router Dinámico</description>
+            </identification>
+            <target>
+                <artifacts-zip>gcc-dynamicRouter-su-1.0.jar</artifacts-zip>
+                <component-name>servicemix-lwcontainer</component-name>
+            </target>
+        </service-unit>
+       
+         
+        <service-unit>  
+  		      <identification>
+                <name>gcc-eip-su</name>
+                <description>Enterprise Integration Patterns Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>gcc-eip-su-1.0.jar</artifacts-zip>
+                <component-name>servicemix-eip</component-name>
+            </target>
+        </service-unit>
+      
+        <service-unit>
+            <identification>
+                <name>gcc-xslt-su</name>
+                <description>XSLT Trasnformer Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>gcc-xslt-su-1.0.jar</artifacts-zip>
+                <component-name>servicemix-saxon</component-name>
+            </target>
+        </service-unit>
+        <service-unit>
+            <identification>
+                <name>gcc-jms-su</name>
+                <description>JMS Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>gcc-jms-su-1.0.jar</artifacts-zip>
+                <component-name>servicemix-jms</component-name>
+            </target>
+        </service-unit>
+    </service-assembly>
+</jbi>

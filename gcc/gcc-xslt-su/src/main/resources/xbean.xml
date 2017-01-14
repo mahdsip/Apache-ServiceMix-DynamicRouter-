@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<beans xmlns:saxon="http://servicemix.apache.org/saxon/1.0"
+	   	 xmlns:gcc="http://selene.com/servicemix/gcc">
+			 
+	<classpath>
+        <location>.</location>
+  	</classpath>
+  
+	<saxon:xslt service="gcc:xslt" 
+							endpoint="xslt"
+            	resource="classpath:version12.xsl"
+            	 />
+</beans>
+
+

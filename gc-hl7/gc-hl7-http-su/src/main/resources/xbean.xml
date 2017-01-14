@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<beans xmlns:http="http://servicemix.apache.org/http/1.0"
+       xmlns:gc-hl7="http://selene.com/servicemix/gc-hl7">
+    
+    <classpath>
+        <location>.</location>
+    </classpath>
+
+	<http:endpoint service="gc-hl7:wireTap"
+	               endpoint="wireTap"
+	               role="consumer" 
+	               defaultMep="http://www.w3.org/2004/08/wsdl/in-out"
+	               locationURI="http://localhost:8080/HL7Service"
+	               soap="true"
+	               soapVersion="1.1"
+	               wsdlResource="classpath:SeleneHL7.wsdl"
+	               />
+</beans>
